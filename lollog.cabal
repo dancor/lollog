@@ -1,0 +1,11 @@
+name:            lollog
+version:         0.1
+license:         GPL
+license-file:    LICENSE
+author:          dan corson <danl@alum.mit.edu>
+synopsis:        very simple home-directory logging
+build-type:      Simple
+build-depends:   base, haskell98, filepath, directory
+
+exposed-modules: Control.LolLog
+hs-source-dirs:  src
