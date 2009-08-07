@@ -4,8 +4,8 @@ import System.Directory
 import System.FilePath.Posix
 
 log :: String -> String -> String -> IO ()
-log program path s = do
+log program file s = do
   home <- getHomeDirectory
-  let logPath = home </> ("." ++ program) </> path
+  let logPath = home </> ("." ++ program)
   createDirectoryIfMissing True logPath
-  appendFile logPath s
+  appendFile (logPath </> file) $ s ++ "\n"
